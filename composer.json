@@ -1,0 +1,8 @@
+{
+    "name": "orphans/mysql-wrapper",
+    "description": "A database wrapper class to help reduce code and support rapid development",
+    "license": "MIT",
+    "require": {
+        "php": ">=5.3.0"
+    }
+}
