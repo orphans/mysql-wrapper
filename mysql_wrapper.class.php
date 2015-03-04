@@ -2,12 +2,12 @@
 
 /*
  * Singleton class - rather than globalising the object instance you should call
- * $var = DATABASE::get_singleton() when it's needed but not accessible.
+ * $var = MYSQL_WRAPPER::get_singleton() when it's needed but not accessible.
  *
  * Strings 'NOW()' and 'NULL' will be converted to MySQL keywords when found in INSERT and UPDATE queries
  */
 
-class DATABASE {
+class MYSQL_WRAPPER {
 
 	private $dsn = NULL;
 	private $dbh = NULL;
@@ -29,7 +29,7 @@ class DATABASE {
 
 	public static function get_singleton() {
 		if (self::$instance == NULL) {
-			self::$instance = new DATABASE();
+			self::$instance = new MYSQL_WRAPPER();
 		}
 		return self::$instance;
 	}
